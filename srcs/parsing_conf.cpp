@@ -744,15 +744,15 @@ serverConf start_conf(char *str)
     //std::cout << noComment << std::endl;
     //empty file
     ret = !noComment.empty();
-    std::cout << "is not empty : " << ret << std::endl;
+    // std::cout << "is not empty : " << ret << std::endl;
     //correct format
     ret = (ret) ? conf.parseContent(noComment) : 0;
-    std::cout << "is correct format : " << ret << std::endl;
+    // std::cout << "is correct format : " << ret << std::endl;
     //missing info
     ret = (ret) ? conf.checkMissing() : 0;
     ret = (ret) ? conf.checkNegValues() : 0;
     //clé valeurs
-    conf.printMap();
+    // conf.printMap();
     //pour un serveur, récupérer toutes les locations ex: server1
     /*size_t x = 0;
     size_t y = 0;
@@ -787,9 +787,9 @@ serverConf start_conf(char *str)
     }*/
     //is valid ?
     conf._valid = ret;
-    if (conf._valid)
-        std::cout << str << " is valid" << std::endl;
-    else
-        std::cout << str << " is not valid" << std::endl;
+    // if (conf._valid)
+    //     std::cout << str << " is valid" << std::endl;
+    // else
+    //     std::cout << str << " is not valid" << std::endl;
     return conf;
 }
