@@ -1,5 +1,3 @@
-#clang++ -Wall -Wextra -Werror -g3 -fsanitize=address -std=c++98 srcs/main.cpp srcs/parsing_conf.cpp srcs/cgi.cpp srcs/request.cpp srcs/socket.cpp srcs/response.cpp
-
 .SUFFIXES:
 
 NAME	=	webserv
